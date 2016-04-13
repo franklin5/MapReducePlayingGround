@@ -1,0 +1,13 @@
+In this wordcount example, we can write our own mapper and reducer python code and supply them to hadoop streaming pipline. Here is how:
+
+1. Create some data:
+> echo "A long time ago in a galaxy far far away" > testfile1
+
+> echo "Another episode of Star Wars" > testfile2
+
+2. Create input dir and copy local files to the HDFS filesystem:
+> hadoop fs -mkdir wordcount_input
+
+> hadoop fs -copyFromLocal testfile* wordcount_input
+
+3. 
